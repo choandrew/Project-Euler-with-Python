@@ -11,7 +11,8 @@ def makearray(number):
         
         array.append(number % 10)
         number //= 10
-        #that double slash is integer division, which I had to  use, because I needed integer outputs
+        #that double slash is integer division,
+        #which I had to  use, because I needed integer outputs
         #apparently, a single slash in python gets float division
     return array
 
@@ -20,6 +21,8 @@ f = lambda n:sorted(makearray(n))
 
 n = 99999
 while not f(n*2) == f(n*3) == f(n*4) == f(n*5) == f(n*6):
-    n += 9
+	n += 1
+	if n == 999999999999:
+		break
 
 print(n)

@@ -26,7 +26,6 @@ def checkarray(array1, array2):
         for digit in array1:
             if digit not in array2:
                 return False
-                break
         return True
 
 while foundnumber == False:
